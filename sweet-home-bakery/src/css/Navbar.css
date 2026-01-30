@@ -1,0 +1,117 @@
+/* =========================
+   NAVBAR WRAPPER
+========================= */
+
+.navbar {
+  width: 100%;
+  padding: 16px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fffaf3;
+  border-bottom: 1px solid #eee2d4;
+  font-family: "Georgia", serif;
+}
+
+/* =========================
+   LEFT (LOGO + NAME)
+========================= */
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-logo {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.brand-text h1 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #3a2a1a;
+  line-height: 1.1;
+}
+
+.brand-text span {
+  font-size: 12px;
+  color: #9b7c5c;
+}
+
+/* =========================
+   CENTER LINKS
+========================= */
+
+.nav-center {
+  display: flex;
+  gap: 34px;
+}
+
+.nav-center a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #5a4634;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-center a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #d8a36a;
+  left: 0;
+  bottom: -6px;
+  transition: width 0.3s ease;
+}
+
+.nav-center a:hover {
+  color: #d8a36a;
+}
+
+.nav-center a:hover::after {
+  width: 100%;
+}
+
+/* =========================
+   RIGHT (PHONE + CART)
+========================= */
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  font-size: 16px;
+  color: #5a4634;
+}
+
+.phone {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cart {
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+}
+
+.cart:hover {
+  transform: scale(1.15);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+  .nav-center {
+    display: none;
+  }
+}

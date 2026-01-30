@@ -1,0 +1,142 @@
+/* =========================
+   FOOTER WRAPPER
+========================= */
+.footer {
+  background: #fffaf5;
+  padding: 80px 20px 0;
+  font-family: inherit;
+}
+
+/* =========================
+   MAIN GRID
+========================= */
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1.2fr;
+  gap: 80px;
+  padding-bottom: 60px;
+}
+
+/* =========================
+   BRAND SECTION
+========================= */
+.footer-brand {
+  color: #5a3b22;
+}
+
+.brand-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.brand-logo {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #d9a36a, #c08a5a);
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-brand h4 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.footer-brand span {
+  font-size: 13px;
+  color: #9b7b60;
+}
+
+.brand-desc {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #7a5a40;
+  max-width: 420px;
+  margin-bottom: 22px;
+}
+
+/* =========================
+   SOCIAL ICONS
+========================= */
+.socials {
+  display: flex;
+  gap: 14px;
+}
+
+.social-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid #e6d3bf;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* =========================
+   LINKS & CONTACT
+========================= */
+.footer-links h5,
+.footer-contact h5 {
+  font-size: 20px;
+  margin-bottom: 18px;
+  color: #5a3b22;
+}
+
+.footer-links ul,
+.footer-contact ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li,
+.footer-contact li {
+  font-size: 15px;
+  margin-bottom: 14px;
+  color: #7a5a40;
+  cursor: pointer;
+}
+
+/* =========================
+   BOTTOM BAR
+========================= */
+.footer-bottom {
+  border-top: 1px solid #eee0d1;
+  padding: 22px 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #7a5a40;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-bottom .privacy {
+  cursor: pointer;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}

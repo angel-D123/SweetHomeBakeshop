@@ -1,0 +1,106 @@
+/* =========================
+   CSS RESET / BASE
+========================= */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+   ROOT VARIABLES
+========================= */
+:root {
+  --bg-main: #faf7f2;
+  --text-primary: #3a2b1f;
+  --text-secondary: #7a5a40;
+  --accent-brown: #c08a5a;
+}
+
+/* =========================
+   GLOBAL BODY
+========================= */
+body {
+  background-color: var(--bg-main);
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* =========================
+   HEADINGS
+========================= */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Merriweather", serif;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+/* =========================
+   PARAGRAPHS
+========================= */
+p {
+  font-size: 16px;
+  color: var(--text-secondary);
+}
+
+/* =========================
+   LINKS
+========================= */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* =========================
+   LISTS
+========================= */
+ul {
+  list-style: none;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+button {
+  font-family: "Merriweather", serif;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+/* =========================
+   FORM ELEMENTS
+========================= */
+input,
+select,
+textarea {
+  font-family: "Merriweather", serif;
+  outline: none;
+}
+
+/* =========================
+   IMAGES
+========================= */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* =========================
+   SMOOTH SCROLL
+========================= */
+html {
+  scroll-behavior: smooth;
+}

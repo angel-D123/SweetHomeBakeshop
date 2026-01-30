@@ -1,0 +1,222 @@
+/* =========================
+   HOME / HERO SECTION
+========================= */
+
+.hero {
+  width: 100%;
+  min-height: calc(100vh - 90px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 6% 115px;
+  gap: 32px;
+  background: #fffaf3;
+}
+
+/* =========================
+   LEFT CONTENT
+========================= */
+
+.hero-text {
+  max-width: 530px;
+}
+
+.hero-badge {
+  display: inline-block;
+  background: #efe5d8;
+  padding: 9px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  color: #5a4634;
+  margin-bottom: 20px;
+}
+
+.hero-text h1 {
+  font-size: 70px;
+  line-height: 1.1;
+  color: #3a2a1a;
+  margin-bottom: 18px;
+}
+
+.hero-text h1 span {
+  color: #d8a36a;
+}
+
+.hero-text p {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #5a4634;
+  margin-bottom: 28px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.hero-buttons {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 32px;
+}
+
+.hero-primary {
+  background: #d8a36a;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 30px;
+  color: white;
+  font-size: 15.5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hero-primary:hover {
+  background: #c18a54;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.hero-secondary {
+  background: transparent;
+  border: 1.5px solid #d8a36a;
+  padding: 14px 32px;
+  border-radius: 30px;
+  color: #d8a36a;
+  font-size: 15.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hero-secondary:hover {
+  background: #d8a36a;
+  color: white;
+}
+
+/* =========================
+   STATS
+========================= */
+
+.hero-stats {
+  display: flex;
+  gap: 50px;
+}
+
+.hero-stats div {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-stats strong {
+  font-size: 26px;
+  color: #3a2a1a;
+}
+
+.hero-stats span {
+  font-size: 20px;
+  color: #6b5542;
+}
+
+/* =========================
+   RIGHT IMAGE
+========================= */
+
+.hero-image {
+  position: relative;
+  max-width: 420px;
+  cursor: pointer;
+}
+
+.hero-image img {
+  width: 380px;
+  max-width: 100%;
+  border-radius: 30px;
+  transform: rotate(4deg);
+  box-shadow: 0 35px 70px rgba(0, 0, 0, 0.22);
+  transition: all 0.6s ease;
+}
+
+.hero-image:hover img {
+  transform: rotate(-2deg) scale(1.05);
+  box-shadow: 0 45px 90px rgba(0, 0, 0, 0.28);
+}
+
+/* IMAGE BADGE */
+
+.image-badge {
+  position: absolute;
+  top: -18px;
+  right: 24px;
+  background: #3a2a1a;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+/* =========================
+   BEST SELLER CARD
+========================= */
+
+.best-seller {
+  position: absolute;
+  bottom: -32px;
+  left: -32px;
+  background: white;
+  padding: 14px 18px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: all 0.4s ease;
+  z-index: 3;
+}
+
+.best-seller:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 22px 45px rgba(0, 0, 0, 0.2);
+}
+
+.best-seller-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.best-seller strong {
+  font-size: 14px;
+  color: #3a2a1a;
+}
+
+.best-seller span {
+  font-size: 15px;
+  color: #6b5542;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 70px 6% 90px;
+  }
+
+  .hero-buttons,
+  .hero-stats {
+    justify-content: center;
+  }
+
+  .hero-image img {
+    width: 100%;
+    transform: none;
+  }
+
+  .best-seller {
+    left: 50%;
+    transform: translateX(50%);
+  }
+}

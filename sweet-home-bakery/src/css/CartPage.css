@@ -1,0 +1,196 @@
+/* =========================
+   PAGE BACKGROUND
+========================= */
+.custom-order-page {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #4a2f14 0%, #2f1d0e 100%);
+  padding: 90px 20px;
+  display: flex;
+  align-items: center;
+}
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+.order-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  background: transparent;
+  gap: 0;
+}
+
+/* =========================
+   LEFT PANEL
+========================= */
+.order-info {
+  padding: 70px 70px 70px 60px;
+  color: #ffffff;
+}
+
+/* BADGE */
+.order-badge {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-size: 14px;
+  margin-bottom: 26px;
+  display: inline-block;
+}
+
+/* HEADING */
+.order-info h2 {
+  font-size: 52px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+/* DESCRIPTION */
+.order-info p {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #e7dccb;
+  max-width: 460px;
+  margin-bottom: 40px;
+}
+
+/* =========================
+   CONTACT INFO
+========================= */
+.contact {
+  margin-bottom: 42px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 16px;
+  color: #e7dccb;
+  margin-bottom: 18px;
+}
+
+.contact-item .icon {
+  width: 42px;
+  height: 42px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================
+   FEATURES LIST
+========================= */
+.order-features {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 30px;
+}
+
+.order-features li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  color: #e7dccb;
+}
+
+.order-features li svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* =========================
+   RIGHT FORM PANEL
+========================= */
+.order-form-card {
+  background: #ffffff;
+  padding: 60px;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* FORM TITLE */
+.order-form-card h3 {
+  font-size: 26px;
+  margin-bottom: 30px;
+  color: #2d1b0f;
+}
+
+/* =========================
+   FORM ELEMENTS
+========================= */
+.order-form label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #2d1b0f;
+}
+
+.order-form input,
+.order-form select,
+.order-form textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid #eadfd4;
+  font-size: 14px;
+  margin-bottom: 22px;
+}
+
+.order-form textarea {
+  min-height: 130px;
+  resize: none;
+}
+
+/* TWO COLUMN INPUTS */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* =========================
+   SUBMIT BUTTON
+========================= */
+.order-form button {
+  margin-top: 10px;
+  width: 100%;
+  padding: 16px;
+  border-radius: 14px;
+  border: none;
+  background: #d9a36a;
+  color: #ffffff;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 900px) {
+  .order-container {
+    grid-template-columns: 1fr;
+  }
+
+  .order-info {
+    padding: 50px 30px;
+  }
+
+  .order-form-card {
+    padding: 40px 30px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .order-features {
+    grid-template-columns: 1fr;
+  }
+}

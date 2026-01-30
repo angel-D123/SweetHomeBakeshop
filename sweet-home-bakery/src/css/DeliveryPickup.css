@@ -1,0 +1,198 @@
+.delivery-section {
+  background: #faf7f2;
+  padding: 100px 6%;
+  text-align: center;
+}
+
+/* ===============================
+   TOP PILL
+================================ */
+.section-pill {
+  display: inline-block;
+  background: #f3e3cf;
+  color: #7a4a2e;
+  padding: 8px 18px;
+  border-radius: 22px;
+  font-size: 15px;
+  margin-bottom: 18px;
+  font-weight: 500;
+}
+
+/* ===============================
+   TITLE & SUBTITLE
+================================ */
+.delivery-section h2 {
+  font-size: 48px;
+  color: #3a2a1a;
+  margin-bottom: 14px;
+}
+
+.section-subtitle {
+  color: #7a6a58;
+  font-size: 18px;
+  margin-bottom: 60px;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ===============================
+   CARDS GRID
+================================ */
+.delivery-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 70px;
+}
+
+/* ===============================
+   DELIVERY CARD
+================================ */
+.delivery-card {
+  position: relative;
+  background: #ffffff;
+  border-radius: 28px;
+  padding: 40px 32px;
+  text-align: left;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* UPPER-RIGHT SPOTLIGHT PILL */
+.delivery-card::after {
+  content: "";
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 220px;
+  height: 220px;
+  background: radial-gradient(
+    circle,
+    rgba(216, 163, 106, 0.35),
+    rgba(216, 163, 106, 0.18),
+    transparent 70%
+  );
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+
+/* HOVER EFFECT */
+.delivery-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 55px rgba(0, 0, 0, 0.12);
+}
+
+.delivery-card:hover::after {
+  opacity: 1;
+}
+
+/* ===============================
+   ICON
+================================ */
+.icon-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  background: #f3e3cf;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+/* ===============================
+   CARD CONTENT
+================================ */
+.delivery-card h3 {
+  font-size: 22px;
+  color: #3a2a1a;
+  margin-bottom: 12px;
+}
+
+.delivery-card p {
+  font-size: 16px;
+  color: #7a6a58;
+  line-height: 1.7;
+  margin-bottom: 22px;
+}
+
+/* ===============================
+   BADGE
+================================ */
+.badge {
+  display: inline-block;
+  background: #f3e3cf;
+  color: #7a4a2e;
+  padding: 8px 14px;
+  border-radius: 22px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* ===============================
+   INFO BAR (DARK PILL)
+================================ */
+.info-bar {
+  background: #3a240f;
+  border-radius: 34px;
+  padding: 34px 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  color: #fff;
+}
+
+/* INFO ITEM */
+.info-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+}
+
+/* INFO ICON */
+.info-icon {
+  background: rgba(255, 255, 255, 0.12);
+  padding: 14px;
+  border-radius: 14px;
+}
+
+/* INFO TITLE */
+.info-item strong {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* INFO TEXT */
+.info-item p {
+  font-size: 15px;
+  opacity: 0.85;
+  line-height: 1.5;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 900px) {
+  .delivery-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .delivery-section h2 {
+    font-size: 40px;
+  }
+
+  .section-subtitle {
+    font-size: 16px;
+  }
+
+  .info-bar {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
