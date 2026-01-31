@@ -99,12 +99,36 @@
   margin: 0;
 }
 
-.footer-links li,
+/* 👉 ICON + TEXT ALIGNMENT FIX */
 .footer-contact li {
+  display: flex;
+  align-items: center;     /* ✅ vertical align */
+  gap: 12px;               /* space between icon & text */
+  font-size: 15px;
+  margin-bottom: 16px;
+  color: #7a5a40;
+}
+
+/* make sure svg does not shrink */
+.footer-contact li svg {
+  flex-shrink: 0;
+}
+
+/* QUICK LINKS */
+.footer-links li {
   font-size: 15px;
   margin-bottom: 14px;
   color: #7a5a40;
-  cursor: pointer;
+}
+
+/* clickable links but same look */
+.footer-links a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
 }
 
 /* =========================
@@ -115,6 +139,7 @@
   padding: 22px 20px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   font-size: 14px;
   color: #7a5a40;
   max-width: 1200px;

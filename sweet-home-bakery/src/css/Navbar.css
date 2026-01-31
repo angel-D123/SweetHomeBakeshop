@@ -11,6 +11,11 @@
   background: #fffaf3;
   border-bottom: 1px solid #eee2d4;
   font-family: "Georgia", serif;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #faf7f2; /* same as site bg */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
 /* =========================
@@ -112,6 +117,59 @@
 
 @media (max-width: 900px) {
   .nav-center {
+    display: none;
+  }
+}
+
+/* =========================
+   HAMBURGER BUTTON
+========================= */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 26px;
+  cursor: pointer;
+  margin-left: 12px;
+}
+
+/* =========================
+   MOBILE MENU
+========================= */
+.mobile-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 100%;
+  background: #fffaf5;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 14px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+  z-index: 1000;
+}
+
+.mobile-menu a {
+  text-decoration: none;
+  color: #3a2a1a;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 900px) {
+  .nav-center {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .phone {
     display: none;
   }
 }

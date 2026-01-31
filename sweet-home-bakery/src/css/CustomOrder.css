@@ -6,7 +6,9 @@
   align-items: center;
 }
 
-/* MAIN WRAPPER */
+/* =========================
+   MAIN WRAPPER
+========================= */
 .order-container {
   max-width: 1200px;
   margin: auto;
@@ -15,72 +17,100 @@
   gap: 60px;
 }
 
-/* LEFT INFO */
+/* =========================
+   LEFT INFO
+========================= */
 .order-info {
   color: #fff;
 }
 
 .order-badge {
-  background: rgba(255,255,255,0.15);
-  padding: 6px 18px;
-  border-radius: 20px;
-  font-size: 14px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 8px 22px;
+  border-radius: 22px;
+  font-size: 15px;
+  display: inline-block;
+  margin-bottom: 18px;
 }
 
+/* TITLE */
 .order-info h2 {
-  font-size: 46px;
+  font-size: 48px; /* slightly bigger */
   margin: 22px 0;
   font-weight: 700;
-  background: linear-gradient(
-    180deg,
-    #fff6ec,
-    #e9d9c7
-  );
-
-  background-clip: text;          /* standard */
-  -webkit-background-clip: text;  /* webkit */
+  background: linear-gradient(180deg, #fff6ec, #e9d9c7);
+  background-clip: text;
+  -webkit-background-clip: text;
   color: transparent;
   -webkit-text-fill-color: transparent;
 }
 
-
+/* DESCRIPTION */
 .order-info p {
   color: #eadfce;
-  line-height: 1.7;
+  line-height: 1.8;
+  font-size: 18px;
+  max-width: 520px;
 }
 
+/* =========================
+   CONTACT SECTION
+========================= */
 .contact {
-  margin: 30px 0;
+  margin: 36px 0;
 }
 
 .contact-item {
   display: flex;
-  align-items: center;
-  gap: 14px;
-  margin-bottom: 14px;
+  align-items: center; /* KEY: perfect vertical align */
+  gap: 16px;
+  margin-bottom: 18px;
+  font-size: 17px; /* larger text */
+  color: #eadfce;
 }
 
+/* ICON WRAPPER */
 .icon {
-  width: 44px;
-  height: 44px;
-  background: rgba(255,255,255,0.15);
+  width: 46px;
+  height: 46px;
+  background: rgba(255, 255, 255, 0.15);
   border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 
+/* =========================
+   FEATURES LIST
+========================= */
 .order-features {
   list-style: none;
   padding: 0;
+  margin-top: 30px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 14px;
-  margin-top: 30px;
+  gap: 18px 24px;
   color: #f2dcc4;
 }
 
-/* FORM CARD */
+.order-features li {
+  display: flex;
+  align-items: center; /* KEY */
+  gap: 14px;
+  font-size: 16.5px; /* slightly bigger */
+  line-height: 1.6;
+}
+
+.order-features li svg {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+/* =========================
+   FORM CARD
+========================= */
 .order-form-card {
   background: linear-gradient(
     135deg,
@@ -89,15 +119,23 @@
   );
   border-radius: 28px;
   padding: 50px;
-  box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(8px);
 }
 
-/* FORM */
+.order-form-card h3 {
+  font-size: 28px;
+  margin-bottom: 24px;
+  color: #3a2b1f;
+}
+
+/* =========================
+   FORM
+========================= */
 .order-form label {
   display: block;
   margin: 18px 0 6px;
-  font-size: 14px;
+  font-size: 15px;
   color: #3a2b1f;
 }
 
@@ -105,10 +143,10 @@
 .order-form select,
 .order-form textarea {
   width: 100%;
-  padding: 15px;
+  padding: 16px;
   border-radius: 16px;
   border: 1px solid #e3d3bf;
-  font-size: 14px;
+  font-size: 15px;
   outline: none;
 }
 
@@ -117,14 +155,18 @@
   resize: none;
 }
 
+/* TWO COLUMNS */
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 22px;
 }
 
+/* =========================
+   SUBMIT BUTTON
+========================= */
 .order-form button {
-  margin-top: 26px;
+  margin-top: 28px;
   width: 100%;
   padding: 18px;
   border-radius: 18px;
@@ -133,15 +175,21 @@
   color: #fff;
   font-size: 16px;
   cursor: pointer;
+  display: flex;
+  align-items: center;      /* align icon + text */
+  justify-content: center;
+  gap: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .order-form button:hover {
   transform: translateY(-4px);
-  box-shadow: 0 14px 30px rgba(0,0,0,0.25);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.25);
 }
 
-/* RESPONSIVE */
+/* =========================
+   RESPONSIVE
+========================= */
 @media (max-width: 900px) {
   .order-container {
     grid-template-columns: 1fr;
@@ -152,6 +200,10 @@
   }
 
   .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .order-features {
     grid-template-columns: 1fr;
   }
 }

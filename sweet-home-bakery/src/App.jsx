@@ -1,32 +1,34 @@
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import Home2 from "./components/Home2";
-import Testimonials from "./components/Testimonials";
 import DeliveryPickup from "./components/DeliveryPickup";
-import CartPage from "./components/CartPage";
-import CheckoutPage from "./components/CheckoutPage";
+import Testimonials from "./components/Testimonials";
 import CustomOrder from "./components/CustomOrder";
 import Footer from "./components/Footer";
+import CartPage from "./components/CartPage";
+import CheckoutPage from "./components/CheckoutPage";
 import { CartProvider, useCart } from "./context/CartContext";
 
 function AppContent() {
   const { page } = useCart();
 
+  const isOverlayOpen = page === "cart" || page === "checkout";
+
   return (
     <>
-      <Navbar />
+      {/* 👉 Navbar ONLY kapag walang overlay */}
+      {!isOverlayOpen && <Navbar />}
 
-      {page === "home" && (
-        <>
-          <Home />
-          <Home2 />
-          <DeliveryPickup />
-          <Testimonials />
-          <CustomOrder />
-          <Footer />
-        </>
-      )}
+      {/* MAIN SCROLLABLE CONTENT */}
+      <section id="home"><Home /></section>
+      <section id="menu"><Home2 /></section>
+      <section id="delivery"><DeliveryPickup /></section>
+      <section id="reviews"><Testimonials /></section>
+      <section id="order"><CustomOrder /></section>
 
+      <Footer />
+
+      {/* OVERLAYS */}
       {page === "cart" && <CartPage />}
       {page === "checkout" && <CheckoutPage />}
     </>
